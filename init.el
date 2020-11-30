@@ -20,7 +20,7 @@
 					      'magit-insert-stashes
 					      'append))
 
-(require 'quasi-monochrome)
+(require 'quasi-monochrome-theme)
 (load-theme 'quasi-monochrome t)
 
 (setq user-full-name "William Culhane"
