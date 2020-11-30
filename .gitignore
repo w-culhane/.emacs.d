@@ -1,2 +1,3 @@
 /epkgs/
 **/*.elc
+**/auto-save-list
