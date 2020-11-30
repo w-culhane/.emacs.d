@@ -21,6 +21,9 @@
 [submodule "magit"]
 	path = lib/magit
 	url = git@github.com:magit/magit.git
+[submodule "quasi-monochrome-theme"]
+	path = lib/quasi-monochrome-theme
+	url = git@github.com:lbolla/emacs-quasi-monochrome.git
 [submodule "transient"]
 	path = lib/transient
 	url = git@github.com:magit/transient.git

@@ -11,7 +11,7 @@
 					      'magit-insert-stashes
 					      'append))
 
-; (load-theme 'quasi-monochrome t)
+(load-theme 'quasi-monochrome t)
 
 (setq user-full-name "William Culhane"
       user-mail-address "sxroka@gmail.com")
