@@ -14,6 +14,9 @@
 [submodule "epkg"]
 	path = lib/epkg
 	url = git@github.com:emacscollective/epkg.git
+[submodule "evil"]
+	path = lib/evil
+	url = git@github.com:emacs-evil/evil.git
 [submodule "magit"]
 	path = lib/magit
 	url = git@github.com:magit/magit.git
