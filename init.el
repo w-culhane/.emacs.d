@@ -5,6 +5,8 @@
 (require 'evil)
 (evil-mode 1)
 
+(ivy-mode 1)
+
 (with-eval-after-load 'magit
 		      (magit-add-section-hook 'magit-status-sections-hook
 					      'magit-insert-modules
