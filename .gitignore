@@ -1,5 +1,3 @@
 /epkgs/
-**/*-autoloads.el
 **/*.elc
 /auto-save-list/
-**/dir/
