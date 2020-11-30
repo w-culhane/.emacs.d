@@ -7,6 +7,8 @@
 
 (ivy-mode 1)
 
+(add-hook 'after-init-hook #'global-flycheck-mode)
+
 (with-eval-after-load 'magit
 		      (magit-add-section-hook 'magit-status-sections-hook
 					      'magit-insert-modules
