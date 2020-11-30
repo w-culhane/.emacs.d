@@ -33,6 +33,9 @@
 [submodule "magit"]
 	path = lib/magit
 	url = git@github.com:magit/magit.git
+[submodule "projectile"]
+	path = lib/projectile
+	url = git@github.com:bbatsov/projectile.git
 [submodule "quasi-monochrome-theme"]
 	path = lib/quasi-monochrome-theme
 	url = git@github.com:lbolla/emacs-quasi-monochrome.git
