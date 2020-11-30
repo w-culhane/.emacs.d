@@ -2,3 +2,4 @@ epkgs
 transient
 auto-save-list
 **/*.elc
+flycheck_init.el
