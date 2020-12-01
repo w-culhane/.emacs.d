@@ -9,35 +9,35 @@
 
 ; Plugins
 (use-package quasi-monochrome-theme
-	     :init (load-theme 'quasi-monochrome t))
-
-(setq evil-want-keybinding nil)
-(setq evil-want-integration t)
+  :config (load-theme 'quasi-monochrome t))
 
 (use-package evil
-	     :init (evil-mode 1))
+  :init
+  (setq evil-want-keybinding nil)
+  (setq evil-want-integration t)
+  :config (evil-mode 1))
 
 (use-package evil-collection
   :after evil
-  :init (evil-collection-init))
+  :config (evil-collection-init))
 
 (use-package ivy
-	     :init (ivy-mode 1))
+  :config (ivy-mode 1))
 
 (use-package which-key
-	     :init (which-key-mode))
+  :config (which-key-mode))
 
 (use-package flycheck
-	     :init
-	     (add-hook 'after-init-hook #'global-flycheck-mode))
+  :config
+  (add-hook 'after-init-hook #'global-flycheck-mode))
 
 (use-package magit
-	     :init
-	     (with-eval-after-load 'magit
-	       (magit-add-section-hook 'magit-status-sections-hook
-				       'magit-insert-modules
-				       'magit-insert-stashes
-				       'append)))
+  :config
+  (with-eval-after-load 'magit
+    (magit-add-section-hook 'magit-status-sections-hook
+			    'magit-insert-modules
+			    'magit-insert-stashes
+			    'append)))
 
 (setq user-full-name "William Culhane"
       user-mail-address "sxroka@gmail.com")
