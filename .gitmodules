@@ -1,6 +1,7 @@
 [submodule "annalist"]
 	path = lib/annalist
 	url = git@github.com:noctuid/annalist.el.git
+	ignore = dirty
 [submodule "avy"]
 	path = lib/avy
 	url = git@github.com:abo-abo/avy.git
