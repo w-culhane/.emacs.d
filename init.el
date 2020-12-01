@@ -28,6 +28,9 @@
   :after evil
   :config (evil-collection-init))
 
+(use-package evil-vimish-fold
+  :after evil)
+
 (use-package evil-nerd-commenter
   :after evil
   :config (evilnc-default-hotkeys nil t))

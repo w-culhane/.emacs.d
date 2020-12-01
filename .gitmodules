@@ -49,6 +49,9 @@
 [submodule "evil-surround"]
 	path = lib/evil-surround
 	url = git@github.com:emacs-evil/evil-surround.git
+[submodule "evil-vimish-fold"]
+	path = lib/evil-vimish-fold
+	url = git@github.com:alexmurray/evil-vimish-fold.git
 [submodule "f"]
 	path = lib/f
 	url = git@github.com:rejeep/f.el.git
@@ -106,6 +109,9 @@
 [submodule "use-package"]
 	path = lib/use-package
 	url = git@github.com:jwiegley/use-package.git
+[submodule "vimish-fold"]
+	path = lib/vimish-fold
+	url = git@github.com:matsievskiysv/vimish-fold.git
 [submodule "which-key"]
 	path = lib/which-key
 	url = git@github.com:justbur/emacs-which-key.git
