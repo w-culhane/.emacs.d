@@ -33,6 +33,9 @@
 (use-package which-key
   :config (which-key-mode))
 
+(use-package rainbow-delimiters
+  :hook (prog-mode . rainbow-delimiters-mode))
+
 (use-package flycheck
   :config
   (add-hook 'after-init-hook #'global-flycheck-mode))
