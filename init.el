@@ -30,6 +30,13 @@
 (use-package ivy
   :config (ivy-mode 1))
 
+(use-package ivy-rich
+  :after ivy
+  :config (ivy-rich-mode 1))
+
+(use-package counsel
+  :config (counsel-mode 1))
+
 (use-package which-key
   :config (which-key-mode))
 
