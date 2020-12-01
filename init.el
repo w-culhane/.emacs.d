@@ -6,13 +6,15 @@
 (eval-when-compile (require 'use-package))
 
 ; Plugins
+(use-package quasi-monochrome-theme
+	     :init (load-theme 'quasi-monochrome t))
+
 (use-package evil
-	     :init
-	     (evil-mode 1))
+	     :init (evil-mode 1))
 
 (use-package ivy
-	     :init
-	     (ivy-mode 1))
+	     :init (ivy-mode 1))
+
 
 (use-package flycheck
 	     :init
@@ -25,10 +27,6 @@
 				       'magit-insert-modules
 				       'magit-insert-stashes
 				       'append)))
-
-(use-package quasi-monochrome-theme
-	     :init
-	     (load-theme 'quasi-monochrome t))
 
 (setq user-full-name "William Culhane"
       user-mail-address "sxroka@gmail.com")
