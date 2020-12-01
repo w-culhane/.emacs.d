@@ -15,6 +15,8 @@
 (use-package ivy
 	     :init (ivy-mode 1))
 
+(use-package which-key
+	     :init (which-key-mode))
 
 (use-package flycheck
 	     :init
