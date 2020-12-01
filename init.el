@@ -3,25 +3,32 @@
 (require 'borg)
 (borg-initialize)
 
+(eval-when-compile (require 'use-package))
+
 ; Plugins
-(require 'evil)
-(evil-mode 1)
+(use-package evil
+	     :init
+	     (evil-mode 1))
 
-(require 'ivy)
-(ivy-mode 1)
+(use-package ivy
+	     :init
+	     (ivy-mode 1))
 
-(require 'flycheck)
-(add-hook 'after-init-hook #'global-flycheck-mode)
+(use-package flycheck
+	     :init
+	     (add-hook 'after-init-hook #'global-flycheck-mode))
 
-(require 'magit)
-(with-eval-after-load 'magit
-		      (magit-add-section-hook 'magit-status-sections-hook
-					      'magit-insert-modules
-					      'magit-insert-stashes
-					      'append))
+(use-package magit
+	     :init
+	     (with-eval-after-load 'magit
+	       (magit-add-section-hook 'magit-status-sections-hook
+				       'magit-insert-modules
+				       'magit-insert-stashes
+				       'append)))
 
-(require 'quasi-monochrome-theme)
-(load-theme 'quasi-monochrome t)
+(use-package quasi-monochrome-theme
+	     :init
+	     (load-theme 'quasi-monochrome t))
 
 (setq user-full-name "William Culhane"
       user-mail-address "sxroka@gmail.com")
