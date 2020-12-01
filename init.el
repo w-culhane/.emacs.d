@@ -20,6 +20,7 @@
   :init
   (setq evil-want-keybinding nil)
   (setq evil-want-integration t)
+  (setq evil-want-C-u-scroll t)
   (setq evil-undo-system 'undo-redo)
   :config (evil-mode 1))
 
@@ -38,6 +39,7 @@
   :config (counsel-mode 1))
 
 (use-package which-key
+  :init (setq which-key-idle-delay 0.5)
   :config (which-key-mode))
 
 (use-package helpful
