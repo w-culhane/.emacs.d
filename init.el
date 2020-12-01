@@ -9,8 +9,15 @@
 (use-package quasi-monochrome-theme
 	     :init (load-theme 'quasi-monochrome t))
 
+(setq evil-want-keybinding nil)
+(setq evil-want-integration t)
+
 (use-package evil
 	     :init (evil-mode 1))
+
+(use-package evil-collection
+  :after evil
+  :init (evil-collection-init))
 
 (use-package ivy
 	     :init (ivy-mode 1))
@@ -43,5 +50,6 @@
 
 (menu-bar-mode -1)
 (tool-bar-mode -1)
+(scroll-bar-mode -1)
 
 (setq inhibit-splash-screen t)
