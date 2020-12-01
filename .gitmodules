@@ -70,9 +70,6 @@
 [submodule "quasi-monochrome-theme"]
 	path = lib/quasi-monochrome-theme
 	url = git@github.com:lbolla/emacs-quasi-monochrome.git
-[submodule "rainbow-delimiters"]
-	path = lib/rainbow-delimiters
-	url = git@github.com:Fanael/rainbow-delimiters.git
 [submodule "s"]
 	path = lib/s
 	url = git@github.com:magnars/s.el.git
