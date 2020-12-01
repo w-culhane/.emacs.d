@@ -104,6 +104,9 @@
 (setq org-agenda-files (list org-directory))
 (setq org-log-done 'time)
 
+(setq org-todo-keywords
+      '((sequence "TODO(t)" "NEXT(n)" "|" "DONE(d!)" "KILL(k!)")))
+
 ; UI
 (column-number-mode)
 (global-display-line-numbers-mode t)
