@@ -59,6 +59,20 @@
 			  'magit-insert-stashes
 			  'append))
 
+(use-package general
+  :config
+  (general-create-definer general/main
+    :keymaps '(normal insert visual emacs)
+    :prefix "SPC"
+    :global-prefix "C-SPC")
+
+  (general/main
+   "na" 'org-agenda
+   "m" (general-simulate-key "C-c")
+   "x" (general-simulate-key "C-x")
+   "ff" 'find-file
+   "gg" 'magit))
+
 (setq user-full-name "William Culhane"
       user-mail-address "sxroka@gmail.com")
 
