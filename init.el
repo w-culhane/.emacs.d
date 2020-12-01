@@ -33,11 +33,10 @@
 
 (use-package magit
   :config
-  (with-eval-after-load 'magit
-    (magit-add-section-hook 'magit-status-sections-hook
-			    'magit-insert-modules
-			    'magit-insert-stashes
-			    'append)))
+  (magit-add-section-hook 'magit-status-sections-hook
+			  'magit-insert-modules
+			  'magit-insert-stashes
+			  'append))
 
 (setq user-full-name "William Culhane"
       user-mail-address "sxroka@gmail.com")
