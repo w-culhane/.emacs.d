@@ -32,6 +32,10 @@
   :after evil
   :config (evilnc-default-hotkeys nil t))
 
+(use-package evil-surround
+  :after evil
+  :config (global-evil-surround-mode 1))
+
 (use-package evil-lion
   :after evil
   :config (evil-lion-mode))

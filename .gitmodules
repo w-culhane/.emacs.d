@@ -46,6 +46,9 @@
 [submodule "evil-nerd-commenter"]
 	path = lib/evil-nerd-commenter
 	url = git@github.com:redguardtoo/evil-nerd-commenter.git
+[submodule "evil-surround"]
+	path = lib/evil-surround
+	url = git@github.com:emacs-evil/evil-surround.git
 [submodule "f"]
 	path = lib/f
 	url = git@github.com:rejeep/f.el.git
