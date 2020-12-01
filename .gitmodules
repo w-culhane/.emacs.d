@@ -40,6 +40,9 @@
 [submodule "evil-exchange"]
 	path = lib/evil-exchange
 	url = git@github.com:Dewdrops/evil-exchange.git
+[submodule "evil-lion"]
+	path = lib/evil-lion
+	url = git@github.com:edkolev/evil-lion.git
 [submodule "f"]
 	path = lib/f
 	url = git@github.com:rejeep/f.el.git

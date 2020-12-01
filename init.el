@@ -28,6 +28,10 @@
   :after evil
   :config (evil-collection-init))
 
+(use-package evil-lion
+  :after evil
+  :config (evil-lion-mode))
+
 (use-package evil-exchange
   :after evil
   :config (evil-exchange-cx-install))
