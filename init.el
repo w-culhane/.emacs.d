@@ -1,3 +1,5 @@
+;;; init.el --- user init file -*- no-byte-compile: t -*-
+
 ; Borg initialization
 (add-to-list 'load-path (expand-file-name "lib/borg" user-emacs-directory))
 (require 'borg)
