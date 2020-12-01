@@ -28,6 +28,10 @@
   :after evil
   :config (evil-collection-init))
 
+(use-package evil-exchange
+  :after evil
+  :config (evil-exchange-cx-install))
+
 (use-package ivy
   :config (ivy-mode 1))
 
