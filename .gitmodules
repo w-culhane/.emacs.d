@@ -43,6 +43,9 @@
 [submodule "evil-lion"]
 	path = lib/evil-lion
 	url = git@github.com:edkolev/evil-lion.git
+[submodule "evil-nerd-commenter"]
+	path = lib/evil-nerd-commenter
+	url = git@github.com:redguardtoo/evil-nerd-commenter.git
 [submodule "f"]
 	path = lib/f
 	url = git@github.com:rejeep/f.el.git

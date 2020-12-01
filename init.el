@@ -28,6 +28,10 @@
   :after evil
   :config (evil-collection-init))
 
+(use-package evil-nerd-commenter
+  :after evil
+  :config (evilnc-default-hotkeys nil t))
+
 (use-package evil-lion
   :after evil
   :config (evil-lion-mode))
@@ -79,6 +83,9 @@
     "na" 'org-agenda
     "m" (general-simulate-key "C-c")
     "x" (general-simulate-key "C-x")
+    "cc" 'evilnc-comment-or-uncomment-lines
+    "cu" 'uncomment-region
+    "ct" 'evilnc-toggle-invert-comment-line-by-line
     "ff" 'find-file
     "gg" 'magit))
 
