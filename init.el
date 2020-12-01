@@ -33,6 +33,12 @@
 (use-package which-key
   :config (which-key-mode))
 
+(use-package helpful
+  :config
+  (global-set-key (kbd "C-h f") #'helpful-callable)
+  (global-set-key (kbd "C-h v") #'helpful-variable)
+  (global-set-key (kbd "C-h k") #'helpful-key))
+
 (use-package flycheck
   :config
   (add-hook 'after-init-hook #'global-flycheck-mode))
