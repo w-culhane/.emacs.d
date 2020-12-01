@@ -7,6 +7,11 @@
 
 (eval-when-compile (require 'use-package))
 
+(use-package auto-compile
+  :config
+  (auto-compile-on-load-mode)
+  (auto-compile-on-save-mode))
+
 ; Plugins
 (use-package quasi-monochrome-theme
   :config (load-theme 'quasi-monochrome t))
