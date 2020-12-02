@@ -1,5 +1,18 @@
 ;;; init.el --- user init file -*- no-byte-compile: t -*-
 
+; UI
+(column-number-mode)
+(global-display-line-numbers-mode t)
+
+(set-fringe-mode 10)
+
+(menu-bar-mode -1)
+(tool-bar-mode -1)
+(scroll-bar-mode -1)
+(tooltip-mode -1)
+
+(setq inhibit-splash-screen t)
+
 ; Borg initialization
 (add-to-list 'load-path (expand-file-name "lib/borg" user-emacs-directory))
 (require 'borg)
@@ -108,16 +121,3 @@
 
 (setq org-todo-keywords
       '((sequence "TODO(t)" "NEXT(n)" "|" "DONE(d!)" "KILL(k!)")))
-
-; UI
-(column-number-mode)
-(global-display-line-numbers-mode t)
-
-(set-fringe-mode 10)
-
-(menu-bar-mode -1)
-(tool-bar-mode -1)
-(scroll-bar-mode -1)
-(tooltip-mode -1)
-
-(setq inhibit-splash-screen t)
