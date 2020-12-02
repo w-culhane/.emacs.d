@@ -86,15 +86,16 @@
     :global-prefix "C-SPC")
 
   (general/main
-    "j" 'swiper
+    "j"  'swiper
     "na" 'org-agenda
-    "m" (general-simulate-key "C-c")
-    "x" (general-simulate-key "C-x")
-    "h" (general-simulate-key "C-h")
+    "m"  (general-simulate-key "C-c")
+    "x"  (general-simulate-key "C-x")
+    "h"  (general-simulate-key "C-h")
     "cc" 'evilnc-comment-or-uncomment-lines
     "cu" 'uncomment-region
     "ct" 'evilnc-toggle-invert-comment-line-by-line
     "ff" 'find-file
+    "bb" 'counsel-switch-buffer
     "gg" 'magit))
 
 (setq user-full-name "William Culhane"
