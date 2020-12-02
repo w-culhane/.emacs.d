@@ -90,6 +90,7 @@
     "na" 'org-agenda
     "m" (general-simulate-key "C-c")
     "x" (general-simulate-key "C-x")
+    "h" (general-simulate-key "C-h")
     "cc" 'evilnc-comment-or-uncomment-lines
     "cu" 'uncomment-region
     "ct" 'evilnc-toggle-invert-comment-line-by-line
