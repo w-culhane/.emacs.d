@@ -84,6 +84,11 @@
   :config
   (add-hook 'after-init-hook #'global-flycheck-mode))
 
+(use-package toc-org
+  :init
+  (add-hook 'org-mode-hook 'toc-org-mode)
+  (add-hook 'markdown-mode-hook 'toc-org-mode))
+
 (use-package magit
   :config
   (magit-add-section-hook 'magit-status-sections-hook
