@@ -31,10 +31,10 @@
 
 (use-package evil
   :init
-  (setq evil-want-keybinding nil)
-  (setq evil-want-integration t)
-  (setq evil-want-C-u-scroll t)
-  (setq evil-undo-system 'undo-redo)
+  (setq evil-want-keybinding nil
+	evil-want-integration t
+	evil-want-C-u-scroll t
+	evil-undo-system 'undo-redo)
   :config (evil-mode 1))
 
 (use-package evil-collection
@@ -134,9 +134,9 @@
       user-mail-address "sxroka@gmail.com")
 
 ; Org setup
-(setq org-directory "~/Documents/org")
-(setq org-agenda-files (list org-directory))
-(setq org-log-done 'time)
-
-(setq org-todo-keywords
-      '((sequence "TODO(t)" "NEXT(n)" "|" "DONE(d!)" "KILL(k!)")))
+(setq org-directory "~/Documents/org"
+      org-agenda-files (list org-directory)
+      org-agenda-skip-scheduled-if-done t
+      org-agenda-skip-deadline-if-done t
+      org-log-done 'time
+      org-todo-keywords '((sequence "TODO(t)" "NEXT(n)" "|" "DONE(d!)" "KILL(k!)")))
