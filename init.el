@@ -1,5 +1,8 @@
 ;;; init.el --- user init file -*- no-byte-compile: t -*-
 
+(setq user-full-name "William Culhane"
+      user-mail-address "sxroka@gmail.com")
+
 ; UI
 (column-number-mode)
 (global-display-line-numbers-mode t)
@@ -12,6 +15,14 @@
 (tooltip-mode -1)
 
 (setq inhibit-splash-screen t)
+
+; Org setup
+(setq org-directory "~/Documents/org"
+      org-agenda-files (list org-directory)
+      org-agenda-skip-scheduled-if-done t
+      org-agenda-skip-deadline-if-done t
+      org-log-done 'time
+      org-todo-keywords '((sequence "TODO(t)" "NEXT(n)" "|" "DONE(d!)" "KILL(k!)")))
 
 ; Borg initialization
 (add-to-list 'load-path (expand-file-name "lib/borg" user-emacs-directory))
@@ -129,14 +140,3 @@
     "ff" 'find-file
     "bb" 'counsel-switch-buffer
     "gg" 'magit))
-
-(setq user-full-name "William Culhane"
-      user-mail-address "sxroka@gmail.com")
-
-; Org setup
-(setq org-directory "~/Documents/org"
-      org-agenda-files (list org-directory)
-      org-agenda-skip-scheduled-if-done t
-      org-agenda-skip-deadline-if-done t
-      org-log-done 'time
-      org-todo-keywords '((sequence "TODO(t)" "NEXT(n)" "|" "DONE(d!)" "KILL(k!)")))
