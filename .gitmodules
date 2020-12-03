@@ -88,6 +88,9 @@
 [submodule "markdown-mode"]
 	path = lib/markdown-mode
 	url = git@github.com:jrblevin/markdown-mode.git
+[submodule "org-super-agenda"]
+	path = lib/org-super-agenda
+	url = git@github.com:alphapapa/org-super-agenda.git
 [submodule "packed"]
 	path = lib/packed
 	url = git@github.com:emacscollective/packed.git
@@ -109,6 +112,9 @@
 [submodule "transient"]
 	path = lib/transient
 	url = git@github.com:magit/transient.git
+[submodule "ts"]
+	path = lib/ts
+	url = git@github.com:alphapapa/ts.el.git
 [submodule "use-package"]
 	path = lib/use-package
 	url = git@github.com:jwiegley/use-package.git
