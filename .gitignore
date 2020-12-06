@@ -4,3 +4,4 @@ auto-save-list
 **/*.elc
 flycheck_init.el
 recentf
+projectile-bookmarks.eld
