@@ -121,6 +121,10 @@
 			  'magit-insert-stashes
 			  'append))
 
+(use-package projectile
+  :config
+  (setq projectile-project-search-path '("~/.emacs.d" "~/depot" "~/Documents")))
+
 (use-package general
   :config
   (general-create-definer general/main
@@ -139,4 +143,6 @@
     "ct" 'evilnc-toggle-invert-comment-line-by-line
     "ff" 'find-file
     "bb" 'counsel-switch-buffer
+    "pf" 'projectile-find-file
+    "pp" 'projectile-switch-project
     "gg" 'magit))
