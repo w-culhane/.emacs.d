@@ -100,20 +100,6 @@
   (add-hook 'org-mode-hook 'toc-org-mode)
   (add-hook 'markdown-mode-hook 'toc-org-mode))
 
-(use-package org-super-agenda
-  :config
-  (org-super-agenda-mode)
-  (setq org-super-agenda-groups
-	'((:name "Critical"
-		:date today
-		:priority "A")
-	  (:name "Important"
-		 :priority "A")
-	  (:name "School"
-		 :tag "school")
-	  ))
-  (org-agenda nil "a"))
-
 (use-package magit
   :config
   (magit-add-section-hook 'magit-status-sections-hook
