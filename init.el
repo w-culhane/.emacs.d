@@ -108,8 +108,10 @@
 			  'append))
 
 (use-package projectile
+  :init
+  (setq projectile-project-search-path '("~/.emacs.d" "~/depot" "~/Documents"))
   :config
-  (setq projectile-project-search-path '("~/.emacs.d" "~/depot" "~/Documents")))
+  (projectile-mode +1))
 
 (use-package general
   :config
