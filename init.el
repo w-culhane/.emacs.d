@@ -23,7 +23,8 @@
       org-agenda-skip-deadline-if-done t
       org-log-done 'time
       org-todo-keywords '((sequence "TODO(t)" "NEXT(n)" "|" "DONE(d)" "KILL(@k)"))
-      org-return-follows-link t)
+      org-return-follows-link t
+      org-agenda-start-with-log-mode t)
 
 ; Borg initialization
 (add-to-list 'load-path (expand-file-name "lib/borg" user-emacs-directory))
