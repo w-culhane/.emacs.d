@@ -24,7 +24,8 @@
       org-log-done 'time
       org-todo-keywords '((sequence "TODO(t)" "NEXT(n)" "|" "DONE(d)" "KILL(@k)"))
       org-return-follows-link t
-      org-agenda-start-with-log-mode t)
+      org-agenda-start-with-log-mode t
+      org-agenda-start-on-weekday 0)
 
 ; Borg initialization
 (add-to-list 'load-path (expand-file-name "lib/borg" user-emacs-directory))
