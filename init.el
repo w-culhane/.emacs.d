@@ -16,6 +16,8 @@
 
 (setq inhibit-splash-screen t)
 
+(setq-default show-trailing-whitespace t)
+
 ; Org setup
 (setq org-directory "~/Documents/org"
       org-agenda-files (list org-directory)
