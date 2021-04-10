@@ -145,6 +145,8 @@
 
 (use-package projectile-ripgrep)
 
+(use-package notmuch)
+
 (use-package general
 	     :config
 	     (general-create-definer general/main
@@ -155,6 +157,7 @@
 	     (general/main
 	       "j"  'swiper
 	       "na" 'org-agenda
+	       "nm" 'notmuch
 	       "m"  (general-simulate-key "C-c")
 	       "x"  (general-simulate-key "C-x")
 	       "h"  (general-simulate-key "C-h")
@@ -175,7 +178,7 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
-   '(projectile-ripgrep general projectile magit toc-org flycheck helpful which-key counsel ivy-rich ivy evil-exchange evil-lion evil-surround evil-nerd-commenter evil-vimish-fold evil-collection evil quasi-monochrome-theme auto-package-update auto-compile use-package)))
+   '(notmuch general projectile magit toc-org flycheck helpful which-key counsel ivy-rich ivy evil-exchange evil-lion evil-surround evil-nerd-commenter evil-vimish-fold evil-collection evil quasi-monochrome-theme auto-package-update auto-compile use-package)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
