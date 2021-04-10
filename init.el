@@ -143,6 +143,8 @@
 	     :config
 	     (projectile-mode +1))
 
+(use-package projectile-ripgrep)
+
 (use-package general
 	     :config
 	     (general-create-definer general/main
@@ -163,14 +165,17 @@
 	       "bb" 'counsel-switch-buffer
 	       "pf" 'projectile-find-file
 	       "pp" 'projectile-switch-project
-	       "gg" 'magit))
+	       "ps" 'projectile-ripgrep
+	       "gg" 'magit
+	       "gp" 'magit-push))
+
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
-   '(general projectile magit toc-org flycheck helpful which-key counsel ivy-rich ivy evil-exchange evil-lion evil-surround evil-nerd-commenter evil-vimish-fold evil-collection evil quasi-monochrome-theme auto-package-update auto-compile use-package)))
+   '(projectile-ripgrep general projectile magit toc-org flycheck helpful which-key counsel ivy-rich ivy evil-exchange evil-lion evil-surround evil-nerd-commenter evil-vimish-fold evil-collection evil quasi-monochrome-theme auto-package-update auto-compile use-package)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
