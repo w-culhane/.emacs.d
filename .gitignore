@@ -1,8 +1,4 @@
-epkgs
-transient
-auto-save-list
-**/*.elc
-flycheck_init.el
-recentf
-projectile-bookmarks.eld
-bookmarks
+/.last-package-update-day
+/elpa/
+/projectile-bookmarks.eld
+/transient/
