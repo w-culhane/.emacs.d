@@ -3,6 +3,9 @@
 (setq user-full-name "William Culhane"
       user-mail-address "sxroka@gmail.com")
 
+(setq user-emacs-directory (expand-file-name "~/.cache/emacs/")
+      url-history-file (expand-file-name "url/history" user-emacs-directory))
+
 (global-set-key (kbd "<escape>") 'keyboard-escape-quit)
 
 ; UI
@@ -64,6 +67,8 @@
 ; Plugins
 (use-package quasi-monochrome-theme
 	     :config (load-theme 'quasi-monochrome t))
+
+(use-package no-littering)
 
 (use-package evil
 	     :init
