@@ -10,6 +10,8 @@
 
 (global-set-key (kbd "<escape>") 'keyboard-escape-quit)
 
+(global-prettify-symbols-mode +1)
+
 ;;; UI options
 (column-number-mode)
 (global-display-line-numbers-mode t)
