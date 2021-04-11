@@ -180,8 +180,7 @@
     "pf" 'projectile-find-file
     "pp" 'projectile-switch-project
     "ps" 'projectile-ripgrep
-    "gg" 'magit
-    "gp" 'magit-push))
+    "g"  'magit))
 
 ;;; Custom
 (custom-set-variables
