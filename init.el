@@ -1,5 +1,7 @@
 ;;; init.el --- user init file -*- no-byte-compile: t -*-
 
+;;; General options
+
 (setq user-full-name "William Culhane"
       user-mail-address "sxroka@gmail.com")
 
@@ -8,7 +10,7 @@
 
 (global-set-key (kbd "<escape>") 'keyboard-escape-quit)
 
-; UI
+;;; UI options
 (column-number-mode)
 (global-display-line-numbers-mode t)
 
@@ -23,7 +25,7 @@
 
 (setq-default show-trailing-whitespace t)
 
-; Org setup
+;;; Org setup
 (setq org-directory "~/Documents/org"
       org-agenda-files (list org-directory)
       org-agenda-skip-scheduled-if-done t
@@ -34,7 +36,7 @@
       org-agenda-start-with-log-mode t
       org-agenda-start-on-weekday 0)
 
-; Package management
+;;; Package management
 (require 'package)
 
 (setq package-archives '(("melpa" . "https://melpa.org/packages/")
@@ -64,11 +66,11 @@
 	     (auto-package-update-maybe)
 	     (auto-package-update-at-time "09:00"))
 
-; Plugins
+(use-package no-littering)
+
+;;; Packages
 (use-package quasi-monochrome-theme
 	     :config (load-theme 'quasi-monochrome t))
-
-(use-package no-littering)
 
 (use-package evil
 	     :init
@@ -147,6 +149,8 @@
 
 (use-package notmuch)
 
+(use-package outshine)
+
 (use-package general
 	     :config
 	     (general-create-definer general/main
@@ -172,6 +176,7 @@
 	       "gg" 'magit
 	       "gp" 'magit-push))
 
+;;; Custom
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
