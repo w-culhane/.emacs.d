@@ -3,7 +3,7 @@
 ;;; General options
 
 (setq user-full-name "William Culhane"
-      user-mail-address "sxroka@gmail.com")
+      user-mail-address "will@culhane.top")
 
 (setq user-emacs-directory (expand-file-name "~/.cache/emacs/")
       url-history-file (expand-file-name "url/history" user-emacs-directory))
@@ -188,6 +188,8 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(notmuch-draft-folder "Drafts")
+ '(notmuch-fcc-dirs "Sent")
  '(package-selected-packages
    '(notmuch general projectile magit toc-org flycheck helpful which-key counsel ivy-rich ivy evil-exchange evil-lion evil-surround evil-nerd-commenter evil-vimish-fold evil-collection evil quasi-monochrome-theme auto-package-update auto-compile use-package))
  '(send-mail-function 'sendmail-send-it))
