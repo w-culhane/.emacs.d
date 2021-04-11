@@ -151,6 +151,11 @@
 
 (use-package outshine)
 
+(use-package auctex
+  :config
+  (setq TeX-auto-save t
+	TeX-parse-self t))
+
 (use-package general
 	     :config
 	     (general-create-definer general/main
