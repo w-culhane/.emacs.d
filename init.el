@@ -188,6 +188,8 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(bubbles-game-theme 'medium)
+ '(bubbles-graphics-theme 'squares)
  '(notmuch-draft-folder "Drafts")
  '(notmuch-fcc-dirs "Sent")
  '(package-selected-packages
