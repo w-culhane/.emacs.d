@@ -158,6 +158,8 @@
   (setq TeX-auto-save t
 	TeX-parse-self t))
 
+(use-package elpher)
+
 (use-package general
   :config
   (general-create-definer general/main
