@@ -1,6 +1,7 @@
 ;;; init.el --- user init file -*- no-byte-compile: t -*-
 
 ;;; General options
+(fset 'yes-or-no-p 'y-or-n-p)
 
 (setq shell-file-name "/bin/bash")
 
@@ -58,9 +59,14 @@
 (setq use-package-always-ensure t)
 
 (use-package auto-compile
+  :init
+  (setq load-prefer-newer t)
   :config
   (auto-compile-on-load-mode)
-  (auto-compile-on-save-mode))
+  (auto-compile-on-save-mode)
+
+  (setq auto-compile-display-buffer nil)
+  (setq auto-compile-mode-line-counter t))
 
 (use-package auto-package-update
   :custom
@@ -155,7 +161,8 @@
 
 (use-package outshine)
 
-(use-package auctex
+(use-package tex
+  :ensure auctex
   :config
   (setq TeX-auto-save t
 	TeX-parse-self t))
