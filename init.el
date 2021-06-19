@@ -2,6 +2,8 @@
 
 ;;; General options
 
+(setq shell-file-name "/bin/bash")
+
 (setq user-full-name "William Culhane"
       user-mail-address "will@culhane.top")
 
