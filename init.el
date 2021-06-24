@@ -159,7 +159,14 @@
 
 (use-package notmuch)
 
-(use-package outshine)
+(use-package org-msg
+  :after notmuch
+  :init
+  (setq mail-user-agent 'notmuch-user-agent))
+
+(use-package outshine
+  :init
+  (defvar outline-minor-mode-prefix "\M-#"))
 
 (use-package tex
   :ensure auctex
