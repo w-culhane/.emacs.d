@@ -157,12 +157,22 @@
 
 (use-package projectile-ripgrep)
 
-(use-package notmuch)
+(use-package notmuch
+  :config
+  (setq mail-user-agent 'notmuch-user-agent))
 
 (use-package org-msg
   :after notmuch
-  :init
-  (setq mail-user-agent 'notmuch-user-agent))
+  :config
+  (setq org-msg-default-alternatives '(text html)
+	org-msg-greeting-fmt "Hello %s,\n\n"
+	org-msg-signature "
+#+BEGIN_SIGNATURE
+Regards,
+
+Will
+#+END_SIGNATURE")
+  (org-msg-mode))
 
 (use-package outshine
   :init
