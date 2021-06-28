@@ -218,8 +218,8 @@ Will
  ;; If there is more than one, they won't work right.
  '(bubbles-game-theme 'medium)
  '(bubbles-graphics-theme 'squares)
- '(notmuch-draft-folder "Drafts")
- '(notmuch-fcc-dirs "Sent")
+ '(notmuch-draft-folder "top/Drafts")
+ '(notmuch-fcc-dirs "top/Sent")
  '(package-selected-packages
    '(notmuch general projectile magit toc-org flycheck helpful which-key counsel ivy-rich ivy evil-exchange evil-lion evil-surround evil-nerd-commenter evil-vimish-fold evil-collection evil quasi-monochrome-theme auto-package-update auto-compile use-package))
  '(send-mail-function 'sendmail-send-it))
