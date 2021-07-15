@@ -19,6 +19,15 @@
 (when (file-exists-p custom-file)
   (load custom-file))
 
+(setq backup-directory-alist '((".*" . "~/.local/share/backup"))
+      tramp-backup-directory-alist backup-directory-alist
+      auto-save-file-name-transforms '((".*" "~/.local/share/auto-save/" t t))
+      version-control t
+      kept-new-versions 32
+      backup-by-copying t
+      delete-old-versions t
+      create-lockfiles nil)
+
 ;;; UI options
 (column-number-mode)
 (global-display-line-numbers-mode t)
@@ -200,7 +209,11 @@ Will
   (general/main
     "j"  'swiper
     "na" 'org-agenda
+    "ww" 'whitespace-mode
+    "wW" 'whitespace-cleanup
     "nm" 'notmuch
+    "nc" 'calc-dispatch
+    "nC" 'calendar
     "m"  (general-simulate-key "C-c")
     "x"  (general-simulate-key "C-x")
     "h"  (general-simulate-key "C-h")
