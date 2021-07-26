@@ -8,8 +8,7 @@
 (setq user-full-name "William Culhane"
       user-mail-address "will@culhane.top")
 
-(setq user-emacs-directory (expand-file-name "~/.cache/emacs/")
-      url-history-file (expand-file-name "url/history" user-emacs-directory))
+(setq url-history-file (expand-file-name "url/history" user-emacs-directory))
 
 (global-set-key (kbd "<escape>") 'keyboard-escape-quit)
 
