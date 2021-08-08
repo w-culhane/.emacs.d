@@ -9,7 +9,7 @@
  '(notmuch-draft-folder "top/Drafts")
  '(notmuch-fcc-dirs "top/Sent")
  '(package-selected-packages
-   '(notmuch general projectile magit toc-org flycheck helpful which-key counsel ivy-rich ivy evil-exchange evil-lion evil-surround evil-nerd-commenter evil-vimish-fold evil-collection evil quasi-monochrome-theme auto-package-update auto-compile use-package))
+   '(lsp-ivy lsp-mode notmuch general projectile magit toc-org flycheck helpful which-key counsel ivy-rich ivy evil-exchange evil-lion evil-surround evil-nerd-commenter evil-vimish-fold evil-collection evil quasi-monochrome-theme auto-package-update auto-compile use-package))
  '(send-mail-function 'sendmail-send-it))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.

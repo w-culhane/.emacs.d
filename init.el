@@ -198,6 +198,17 @@ Will
 
 (use-package elpher)
 
+(use-package lsp-mode
+  :init
+  (setq lsp-keymap-prefix "C-c l")
+  :config
+  (lsp-enable-which-key-integration t)
+  (add-hook 'c-mode-hook 'lsp)
+  (add-hook 'c++-mode-hook 'lsp))
+
+(use-package lsp-ivy
+  :after (ivy lsp-mode))
+
 (use-package general
   :config
   (general-create-definer general/main
