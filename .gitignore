@@ -1,4 +1,8 @@
-/straight
+/straight/build
+/straight/build-cache.el
+/straight/repos
+/straight/watcher
+
 /elpa
 /var
 /.last-package-update-day
