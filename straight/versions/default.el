@@ -32,7 +32,7 @@
  ("markdown-mode" . "0839d0709e116584bd070305e4a0d28bd03bc547")
  ("melpa" . "d5d2201ba8ba0ece3a9d76970ea0ac6f94a3800a")
  ("no-littering" . "b12a85a5afff7b5d60f889c1c2e8f5deab7fdbae")
- ("notmuch" . "84347ffcad24b48390c622e5a96c31c97c094daa")
+ ("notmuch" . "3f30ee65efec7c35e56af36eaa49af5c2e220d8f")
  ("org-msg" . "eb01f60b1ddc132f616d2c1f4038c23f42fc3847")
  ("pkg-info" . "76ba7415480687d05a4353b27fea2ae02b8d9d61")
  ("projectile" . "db5748ea4a6428136769e7e50c6d0a12aa7acd8f")
