@@ -54,47 +54,51 @@
       org-agenda-start-on-weekday 0)
 
 ;;; Package management
-(require 'package)
+(setq straight-check-for-modifications '(watch-files))
 
-(setq package-archives '(("melpa" . "https://melpa.org/packages/")
-			 ("org" . "https://orgmode.org/elpa/")
-			 ("elpa" . "https://elpa.gnu.org/packages/")))
+(defvar bootstrap-version)
+(let ((bootstrap-file
+       (expand-file-name "straight/repos/straight.el/bootstrap.el" user-emacs-directory))
+      (bootstrap-version 5))
+  (unless (file-exists-p bootstrap-file)
+    (with-current-buffer
+	(url-retrieve-synchronously
+	 "https://raw.githubusercontent.com/raxod502/straight.el/develop/install.el"
+	 'silent 'inhibit-cookies)
+      (goto-char (point-max))
+      (eval-print-last-sexp)))
+  (load bootstrap-file nil 'nomessage))
 
-(package-initialize)
-(unless package-archive-contents
-  (package-refresh-contents))
+(straight-use-package 'use-package)
 
-(unless (package-installed-p 'use-package)
-  (package-install 'use-package))
+					; (straight-use-package auto-compile
+					; :init
+					; (setq load-prefer-newer t)
+					; :config
+					; (auto-compile-on-load-mode)
+					; (auto-compile-on-save-mode)
 
-(require 'use-package)
-(setq use-package-always-ensure t)
+					; (setq auto-compile-display-buffer nil)
+					; (setq auto-compile-mode-line-counter t))
 
-(use-package auto-compile
-  :init
-  (setq load-prefer-newer t)
-  :config
-  (auto-compile-on-load-mode)
-  (auto-compile-on-save-mode)
+					; (straight-use-package auto-package-update
+					; :custom
+					; (auto-package-update-interval 7)
+					; (auto-package-update-prompt-before-update t)
+					; :config
+					; (auto-package-update-maybe)
+					; (auto-package-update-at-time "09:00"))
 
-  (setq auto-compile-display-buffer nil)
-  (setq auto-compile-mode-line-counter t))
-
-(use-package auto-package-update
-  :custom
-  (auto-package-update-interval 7)
-  (auto-package-update-prompt-before-update t)
-  :config
-  (auto-package-update-maybe)
-  (auto-package-update-at-time "09:00"))
-
-(use-package no-littering)
+(use-package no-littering
+  :straight t)
 
 ;;; Packages
 (use-package quasi-monochrome-theme
+  :straight t
   :config (load-theme 'quasi-monochrome t))
 
 (use-package evil
+  :straight t
   :init
   (setq evil-want-keybinding nil
 	evil-want-integration t
@@ -103,58 +107,72 @@
   :config (evil-mode 1))
 
 (use-package evil-collection
+  :straight t
   :after evil
   :config (evil-collection-init))
 
 (use-package evil-vimish-fold
+  :straight t
   :after evil)
 
 (use-package evil-nerd-commenter
+  :straight t
   :after evil
   :config (evilnc-default-hotkeys nil t))
 
 (use-package evil-surround
+  :straight t
   :after evil
   :config (global-evil-surround-mode 1))
 
 (use-package evil-lion
+  :straight t
   :after evil
   :config (evil-lion-mode))
 
 (use-package evil-exchange
+  :straight t
   :after evil
   :config (evil-exchange-cx-install))
 
 (use-package ivy
+  :straight t
   :config (ivy-mode 1))
 
 (use-package ivy-rich
-  :after ivy
+  :straight t
+  :after (ivy counsel)
   :config (ivy-rich-mode 1))
 
 (use-package counsel
+  :straight t
   :config (counsel-mode 1))
 
 (use-package which-key
+  :straight t
   :init (setq which-key-idle-delay 0.5)
   :config (which-key-mode))
 
 (use-package helpful
+  :straight t
   :config
   (global-set-key (kbd "C-h f") #'helpful-callable)
   (global-set-key (kbd "C-h v") #'helpful-variable)
   (global-set-key (kbd "C-h k") #'helpful-key))
 
 (use-package flycheck
+  :straight t
   :config
   (add-hook 'after-init-hook #'global-flycheck-mode))
 
 (use-package toc-org
+  :straight t
   :init
   (add-hook 'org-mode-hook 'toc-org-mode)
   (add-hook 'markdown-mode-hook 'toc-org-mode))
 
 (use-package magit
+  :straight t
   :config
   (magit-add-section-hook 'magit-status-sections-hook
 			  'magit-insert-modules
@@ -162,18 +180,22 @@
 			  'append))
 
 (use-package projectile
+  :straight t
   :init
   (setq projectile-project-search-path '("~/.emacs.d" "~/depot" "~/Documents"))
   :config
   (projectile-mode +1))
 
-(use-package projectile-ripgrep)
+(use-package projectile-ripgrep
+  :straight t)
 
 (use-package notmuch
+  :straight t
   :config
   (setq mail-user-agent 'notmuch-user-agent))
 
 (use-package org-msg
+  :straight t
   :after notmuch
   :config
   (setq org-msg-default-alternatives '(text html)
@@ -191,14 +213,16 @@ Will
   (defvar outline-minor-mode-prefix "\M-#"))
 
 (use-package tex
-  :ensure auctex
+  :straight auctex
   :config
   (setq TeX-auto-save t
 	TeX-parse-self t))
 
-(use-package elpher)
+(use-package elpher
+  :straight t)
 
 (use-package lsp-mode
+  :straight t
   :init
   (setq lsp-keymap-prefix "C-c l")
   :config
@@ -207,9 +231,11 @@ Will
   (add-hook 'c++-mode-hook 'lsp))
 
 (use-package lsp-ivy
+  :straight t
   :after (ivy lsp-mode))
 
 (use-package general
+  :straight t
   :config
   (general-create-definer general/main
     :keymaps '(normal insert visual emacs)
