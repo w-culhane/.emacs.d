@@ -208,10 +208,6 @@ Will
 #+END_SIGNATURE")
   (org-msg-mode))
 
-(use-package outshine
-  :init
-  (defvar outline-minor-mode-prefix "\M-#"))
-
 (use-package tex
   :straight auctex
   :config
