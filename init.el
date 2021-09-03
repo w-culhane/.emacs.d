@@ -224,7 +224,8 @@ Will
   :config
   (lsp-enable-which-key-integration t)
   (add-hook 'c-mode-hook 'lsp)
-  (add-hook 'c++-mode-hook 'lsp))
+  (add-hook 'c++-mode-hook 'lsp)
+  (add-hook 'python-mode-hook 'lsp))
 
 (use-package lsp-ivy
   :straight t
