@@ -217,6 +217,11 @@ Will
 (use-package elpher
   :straight t)
 
+(use-package rustic
+  :straight t
+  :config
+  (setq rustic-format-on-save t))
+
 (use-package lsp-mode
   :straight t
   :init
