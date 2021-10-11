@@ -222,6 +222,9 @@ Will
   :config
   (setq rustic-format-on-save t))
 
+(use-package arduino-mode
+  :straight t)
+
 (use-package lsp-mode
   :straight t
   :init
