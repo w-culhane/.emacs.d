@@ -104,7 +104,9 @@
 	evil-want-integration t
 	evil-want-C-u-scroll t
 	evil-undo-system 'undo-redo)
-  :config (evil-mode 1))
+  :config
+  (evil-mode 1)
+  (evil-define-key 'normal org-mode-map (kbd "<tab>") #'org-cycle))
 
 (use-package evil-collection
   :straight t
