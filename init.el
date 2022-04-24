@@ -8,6 +8,9 @@
 (setq user-full-name "William Culhane"
       user-mail-address "will@culhane.top")
 
+(when (member "Iosevka Curly Slab" (font-family-list))
+  (set-frame-font "Iosevka Curly Slab" t t))
+
 (setq url-history-file (expand-file-name "url/history" user-emacs-directory))
 
 (global-set-key (kbd "<escape>") 'keyboard-escape-quit)
@@ -96,6 +99,20 @@
 (use-package quasi-monochrome-theme
   :straight t
   :config (load-theme 'quasi-monochrome t))
+
+(use-package ligature
+  :straight (ligature
+	     :type git
+	     :host github
+	     :repo "mickeynp/ligature.el")
+  :config
+  (ligature-set-ligatures 'prog-mode '("<---" "<--"  "<<-" "<-" "->" "-->" "--->" "<->" "<-->" "<--->" "<---->" "<!--"
+				       "<==" "<===" "<=" "=>" "=>>" "==>" "===>" ">=" "<=>" "<==>" "<===>" "<====>" "<!---"
+				       "<~~" "<~" "~>" "~~>" "::" ":::" "==" "!=" "===" "!=="
+				       ":=" ":-" ":+" "<*" "<*>" "*>" "<|" "<|>" "|>" "+:" "-:" "=:" "<******>" "++" "+++"))
+  ;; Enables ligature checks globally in all buffers. You can also do it
+  ;; per mode with `ligature-mode'.
+  (global-ligature-mode t))
 
 (use-package evil
   :straight t
@@ -226,9 +243,6 @@ Will
 
 (use-package dts-mode
   :straight t)
-
-;(use-package arduino-mode
-  ;:straight t)
 
 (use-package lsp-mode
   :straight t
