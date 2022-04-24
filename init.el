@@ -244,6 +244,11 @@ Will
 (use-package dts-mode
   :straight t)
 
+(use-package graphviz-dot-mode
+  :straight t
+  :config
+  (setq graphviz-dot-indent-width 4))
+
 (use-package lsp-mode
   :straight t
   :init
