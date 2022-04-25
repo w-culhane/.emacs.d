@@ -8,8 +8,8 @@
 (setq user-full-name "William Culhane"
       user-mail-address "will@culhane.top")
 
-(when (member "Iosevka Curly Slab" (font-family-list))
-  (set-frame-font "Iosevka Curly Slab" t t))
+(add-to-list 'default-frame-alist
+             '(font . "Iosevka Curly Slab-12"))
 
 (setq url-history-file (expand-file-name "url/history" user-emacs-directory))
 
