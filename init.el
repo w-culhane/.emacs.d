@@ -11,6 +11,9 @@
 (add-to-list 'default-frame-alist
              '(font . "Iosevka Curly Slab-12"))
 
+(set-face-font 'fixed-pitch-serif "Iosevka Etoile")
+(set-face-font 'variable-pitch "Iosevka Etoile")
+
 (setq url-history-file (expand-file-name "url/history" user-emacs-directory))
 
 (global-set-key (kbd "<escape>") 'keyboard-escape-quit)
@@ -106,8 +109,13 @@
 	     :host github
 	     :repo "mickeynp/ligature.el")
   :config
+  (setq ligature-composition-table nil)
   (ligature-set-ligatures 'prog-mode '("<---" "<--"  "<<-" "<-" "->" "-->" "--->" "<->" "<-->" "<--->" "<---->" "<!--"
 				       "<==" "<===" "<=" "=>" "=>>" "==>" "===>" ">=" "<=>" "<==>" "<===>" "<====>" "<!---"
+				       "<~~" "<~" "~>" "~~>" "::" ":::" "==" "!=" "===" "!=="
+				       ":=" ":-" ":+" "<*" "<*>" "*>" "<|" "<|>" "|>" "+:" "-:" "=:" "<******>" "++" "+++"))
+  (ligature-set-ligatures 'vhdl-mode '("<---" "<--"  "<<-" "<-" "->" "-->" "--->" "<->" "<-->" "<--->" "<---->" "<!--"
+				       "<==" "<===" "=>" "=>>" "==>" "===>" "<=>" "<==>" "<===>" "<====>" "<!---"
 				       "<~~" "<~" "~>" "~~>" "::" ":::" "==" "!=" "===" "!=="
 				       ":=" ":-" ":+" "<*" "<*>" "*>" "<|" "<|>" "|>" "+:" "-:" "=:" "<******>" "++" "+++"))
   ;; Enables ligature checks globally in all buffers. You can also do it
